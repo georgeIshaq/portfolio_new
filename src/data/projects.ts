@@ -85,6 +85,31 @@ export const projects: Project[] = [
     techStack: ["R", "Data Visualization", "Statistics"],
     github: "https://github.com/yourusername/teeth-brushing-analysis",
     year: 2021
+  },
+  {
+    id: "7",
+    title: "Interactive Portfolio",
+    slug: "interactive-portfolio",
+    description: "A creative portfolio website with interactive elements and draggable cards. Built with Next.js and custom animations to showcase projects in an engaging way.",
+    shortDescription: "Interactive portfolio with draggable project cards and canvas effects",
+    image: "/projects/portfolio-placeholder.jpg",
+    featured: true,
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Canvas API"],
+    github: "https://github.com/yourusername/portfolio",
+    link: "https://yourportfolio.com",
+    year: 2023
+  },
+  {
+    id: "8",
+    title: "AI Code Assistant",
+    slug: "ai-code-assistant",
+    description: "A developer tool that helps programmers write better code through intelligent suggestions, pattern recognition, and automatic bug detection. Built with machine learning and deep code analysis.",
+    shortDescription: "Smart developer tool with AI-powered code suggestions and bug detection",
+    image: "/projects/ai-code-placeholder.jpg",
+    featured: true,
+    techStack: ["Python", "Machine Learning", "VS Code Extension", "TypeScript"],
+    github: "https://github.com/yourusername/ai-code-assistant",
+    year: 2023
   }
 ];
 

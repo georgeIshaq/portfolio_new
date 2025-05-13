@@ -37,7 +37,7 @@ const CanvasEffect = ({ heroSectionId }: CanvasEffectProps) => {
     function Line(this: any, e: any) {
       this.init(e || {});
     }
-    let ctx: any, f: any, pos: { x?: number; y?: number } = {}, lines: any[] = [], animationId: number;
+    let ctx: any, f: any, pos: { x: number; y: number } = { x: 0, y: 0 }, lines: any[] = [], animationId: number;
     
     // Last known mouse position in viewport coordinates (not scroll-dependent)
     let lastClientX = 0;
@@ -247,12 +247,16 @@ const CanvasEffect = ({ heroSectionId }: CanvasEffectProps) => {
       ctx.globalCompositeOperation = "source-over";
       ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
       ctx.globalCompositeOperation = "lighter";
-      ctx.strokeStyle = `hsla(${Math.round(f.update())},100%,50%,0.025)`;
+      
+      // Use default style
+      ctx.strokeStyle = `hsla(${Math.round(f.update())},80%,50%,0.025)`;
       ctx.lineWidth = 10;
+      
       for (let t = 0; t < E.trails; t++) {
         lines[t].update();
         lines[t].draw();
       }
+      
       ctx.frame++;
       animationId = window.requestAnimationFrame(render);
     }
